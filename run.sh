@@ -1,5 +1,3 @@
-wget -O config.yaml https://bitbucket.org/watir/watir/raw/master/config.yaml
-
 gcloud ai hp-tuning-jobs create \
     --region=us-central1 \
     --display-name=kahiji \
