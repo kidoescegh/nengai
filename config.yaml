@@ -11,12 +11,6 @@ studySpec:
     doubleValueSpec:
       minValue: 0
       maxValue: 1
-  - parameterId: num_neurons
-    discreteValueSpec:
-      discreteValues:
-      - 64
-      - 128
-      - 512
 trialJobSpec:
   workerPoolSpecs:
     - machineSpec:
