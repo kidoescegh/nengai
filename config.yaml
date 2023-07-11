@@ -1,6 +1,6 @@
 studySpec:
   metrics:
-  - metricId: Accuracy
+  - metricId: accuracy
     goal: MAXIMIZE
   parameters:
   - parameterId: learning_rate
@@ -13,8 +13,10 @@ studySpec:
       maxValue: 1
   - parameterId: num_neurons
     discreteValueSpec:
-      discreteValues: 512
-  algorithm: RANDOM_SEARCH
+      discreteValues:
+      - 64
+      - 128
+      - 512
 trialJobSpec:
   workerPoolSpecs:
     - machineSpec:
