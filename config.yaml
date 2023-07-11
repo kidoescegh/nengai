@@ -1,28 +1,28 @@
-displayName: MyHptJob
+displayName: TestHpTuningJob
+studySpec:
+  metrics:
+  - metricId: accuracy
+    goal: MAXIMIZE
+  parameters:
+  - parameterId: learning_rate
+    doubleValueSpec:
+      minValue: 0.01
+      maxValue: 1
+  - parameterId: momentum
+    doubleValueSpec:
+      minValue: 0
+      maxValue: 1
+  - parameterId: num_neurons
+    discreteValueSpec:
+      values: [512]
+  algorithm: RANDOM_SEARCH
 trialJobSpec:
   workerPoolSpecs:
-    - machineSpec:
-        machineType: n1-standard-4
-      replicaCount: 1
-      containerSpec:
-        imageUri: gcr.io/your-project/subu:nya
-  parameterSpec:
-    algorithm: RANDOM_SEARCH
-    parameters:
-      - doubleValueSpec:
-          minValue: 0.01
-          maxValue: 0.1
-          scaleType: UNIT_LOG_SCALE
-          parameterId: learning_rate
-      - doubleValueSpec:
-          minValue: 0
-          maxValue: 1
-          scaleType: UNIT_LINEAR_SCALE
-          parameterId: momentum
-      - discreteValueSpec:
-          values: [64, 128, 512]
-          parameterId: num_neurons
-  measurementSpec:
-    metrics:
-      - metricId: accuracy
-        goal: MAXIMIZE
+  - machineSpec:
+      machineType: n1-standard-4
+    replicaCount: 1
+    diskSpec:
+      bootDiskType: pd-ssd
+      bootDiskSizeGb: 100
+    containerSpec:
+      imageUri: gcr.io/qwiklabs-gcp-04-b2ce03131c25/subu:nya
