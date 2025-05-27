@@ -6,4 +6,4 @@ workerPoolSpecs:
       bootDiskType: pd-ssd
       bootDiskSizeGb: 100
   containerSpec:
-    imageUri: gcr.io/PROJECT_ID/moso:cok
+    imageUri: gcr.io/qwiklabs-gcp-04-36e4c9313f35/isugan:cok
