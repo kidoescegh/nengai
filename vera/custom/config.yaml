@@ -6,4 +6,4 @@ workerPoolSpecs:
       bootDiskType: pd-ssd
       bootDiskSizeGb: 100
   containerSpec:
-    imageUri: gcr.io/qwiklabs-gcp-02-d9c241e80ac8/pelit:kikir
+    imageUri: gcr.io/beaming-signal-463711-j6/edan:elu
